@@ -9,7 +9,7 @@
         ><a href="https://github.com/jramadani/geo-repspending"
           ><img src="../public/notes.svg" /> </a
         >&nbsp; &nbsp;&nbsp;&nbsp;<a
-          href="https://github.com/jramadani/geo-repspending/public"
+          href="https://github.com/jramadani/geo-repspending/tree/master/public"
           ><img src="../public/paper.svg" /></a
       ></span>
     </div>

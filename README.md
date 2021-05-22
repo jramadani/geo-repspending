@@ -38,7 +38,7 @@ The site consists of one overarching app and two components that feed into the a
 
 ### Data & Methodology
 
-[Please see this README file to find out more about the data and methodology](https://github.com/jramadani/geo-repspending/public/README.md).
+[Please see this README file to find out more about the data and methodology](https://github.com/jramadani/geo-repspending/tree/master/public).
 
 ### Potential Next Steps
 

@@ -46,9 +46,58 @@
             representatives spend a lot, the highest spenders represent
             districts that are from large states, or districts notable for
             containing big cities. Below you’ll find a table listing the top
-            five spenders.
+            five spenders. Click on any district on the map to see information about the spender!
           </p>
-          <p class="table-2"></p>
+           <p style="font-size:14px;">You may note that a representative on this table is from Puerto Rico, which is not a state; the House has delegate representatives from our territories, who get budgets for their offices.</p>
+           <p><b>Top 5 Overall Spenders</b></p>
+          <p class="table-2">
+            <table class="table-dist">
+              <thead>
+                <tr>
+                  <th style="font-size: 16px;">Representative</th>
+                  <th style="font-size: 16px;">Party</th>
+                  <th style="font-size: 16px;">State</th>
+                  <th style="font-size: 16px;">Geoid</th>
+                  <th style="font-size: 16px;">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);">
+                  <td style="font-size: 14px; padding: 0.7em;">Jenniffer González-Colón</td>
+                  <td style="font-size: 14px; padding: 0.7em;">Republican</td>
+                  <td style="font-size: 14px; padding: 0.7em;">PR</td>
+                  <td style="font-size: 14px; padding: 0.7em;">7298</td>
+                  <td style="font-size: 14px; padding: 0.7em;">1,712,723</td>
+                  </tr>
+                  <tr style="background-color: rgb(108, 180, 180); color: rgb(238, 238, 238);">
+                    <td style="font-size: 14px; padding: 0.7em;">Carolyn B. Maloney</td>
+                    <td style="font-size: 14px; padding: 0.7em;">Democrat</td>
+                    <td style="font-size: 14px; padding: 0.7em;">NY</td>
+                    <td style="font-size: 14px; padding: 0.7em;">3612</td>
+                    <td style="font-size: 14px; padding: 0.7em;">1,546,331</td>
+                    </tr>
+                    <tr style="background-color: rgb(111, 181, 181); color: rgb(238, 238, 238);">
+                      <td style="font-size: 14px; padding: 0.7em;">Jerrold Nadler</td>
+                      <td style="font-size: 14px; padding: 0.7em;">Democrat</td>
+                      <td style="font-size: 14px; padding: 0.7em;">NY</td>
+                      <td style="font-size: 14px; padding: 0.7em;">3610</td>
+                      <td style="font-size: 14px; padding: 0.7em;">1,536,029</td>
+                      </tr>
+                  <tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);">
+                    <td style="font-size: 14px; padding: 0.7em;">Suzanne Bonamici</td>
+                    <td style="font-size: 14px; padding: 0.7em;">Democrat</td>
+                    <td style="font-size: 14px; padding: 0.7em;">OR</td>
+                    <td style="font-size: 14px; padding: 0.7em;">4101</td>
+                    <td style="font-size: 14px; padding: 0.7em;">1,529,780</td></tr>
+                    <tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);">
+                      <td style="font-size: 14px; padding: 0.7em;">Elissa Slotkin</td>
+                      <td style="font-size: 14px; padding: 0.7em;">Democrat</td>
+                      <td style="font-size: 14px; padding: 0.7em;">MI</td>
+                      <td style="font-size: 14px; padding: 0.7em;">2608</td>
+                      <td style="font-size: 14px; padding: 0.7em;">1,529,557</td></tr>
+                      </tbody>
+                      </table>
+              </p>
         </div>
       </section>
       <section>
@@ -74,8 +123,8 @@
             >), this map doesn’t hold much useful information. Below is a table
             showing the top five spenders on personnel compensation.
           </p>
-          <!-- <Table :maindata="maindata" /> -->
-          <p class="table-3"></p>
+         <p><b>Top 5 Personnel Compensation Spenders</b></p>
+          <p class="table-3"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Theodore E. Deutch</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">FL</td><td style="font-size: 14px; padding: 0.7em;">1222</td><td style="font-size: 14px; padding: 0.7em;">1,312,348</td></tr><tr style="background-color: rgb(78, 170, 172); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Denny Heck</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">WA</td><td style="font-size: 14px; padding: 0.7em;">5310</td><td style="font-size: 14px; padding: 0.7em;">1,306,816</td></tr><tr style="background-color: rgb(90, 174, 175); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Martha Roby</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">AL</td><td style="font-size: 14px; padding: 0.7em;">0102</td><td style="font-size: 14px; padding: 0.7em;">1,292,470</td></tr><tr style="background-color: rgb(99, 177, 178); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">John Shimkus</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">IL</td><td style="font-size: 14px; padding: 0.7em;">1715</td><td style="font-size: 14px; padding: 0.7em;">1,282,744</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Danny K. Davis</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">IL</td><td style="font-size: 14px; padding: 0.7em;">1707</td><td style="font-size: 14px; padding: 0.7em;">1,267,389</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -84,11 +133,12 @@
             Those representatives who are the highest spenders in terms of rent,
             communications, and utilities are from tiny districts near highly
             populated cities—you can see small brightly colored “hot spots”
-            around those cities in places like California and Texas. Click on a
+            around those cities in places like California and Texas. Remember that you can click on a
             district on the map that you’re interested in to see more
-            information about the representative and the amount spent.
+            information about the representative and the amount spent!
           </p>
-          <p class="table-4"></p>
+          <p><b>Top 5 Spenders<br>Rent, Communications, & Utilities</b></p>
+          <p class="table-4"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Gregory W. Meeks</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NY</td><td style="font-size: 14px; padding: 0.7em;">3605</td><td style="font-size: 14px; padding: 0.7em;">294,504</td></tr><tr style="background-color: rgb(96, 176, 177); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Hakeem S. Jeffries</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NY</td><td style="font-size: 14px; padding: 0.7em;">3608</td><td style="font-size: 14px; padding: 0.7em;">247,364</td></tr><tr style="background-color: rgb(99, 177, 178); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Nancy Pelosi</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0612</td><td style="font-size: 14px; padding: 0.7em;">242,724</td></tr><tr style="background-color: rgb(103, 178, 179); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Anna G. Eshoo</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0618</td><td style="font-size: 14px; padding: 0.7em;">234,570</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Eddie Bernice Johnson</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4830</td><td style="font-size: 14px; padding: 0.7em;">215,494</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -107,8 +157,8 @@
             this category are, strangely enough, representing some unexpected
             locations.
           </p>
-          <!-- <Table :maindata="maindata" /> -->
-          <p class="table-5"></p>
+          <p><b>Top 5 Printing Spenders</b></p>
+          <p class="table-5"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Ross Spano</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">FL</td><td style="font-size: 14px; padding: 0.7em;">1215</td><td style="font-size: 14px; padding: 0.7em;">287,548</td></tr><tr style="background-color: rgb(74, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Dan Bishop</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">NC</td><td style="font-size: 14px; padding: 0.7em;">3709</td><td style="font-size: 14px; padding: 0.7em;">286,103</td></tr><tr style="background-color: rgb(81, 171, 173); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Jim Hagedorn</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">MN</td><td style="font-size: 14px; padding: 0.7em;">2701</td><td style="font-size: 14px; padding: 0.7em;">270,375</td></tr><tr style="background-color: rgb(108, 180, 180); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Katie Porter</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0645</td><td style="font-size: 14px; padding: 0.7em;">209,997</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Gerald E. Connolly</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">VA</td><td style="font-size: 14px; padding: 0.7em;">5111</td><td style="font-size: 14px; padding: 0.7em;">202,329</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -123,7 +173,8 @@
             category are in populous cities regardless of party—zoom in on NYC,
             San Jose, and Houston to check out the highlights!
           </p>
-          <p class="table-6"></p>
+          <p><b>Top 5 "Other Services" Spenders</b></p>
+          <p class="table-6"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Roger Williams</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4825</td><td style="font-size: 14px; padding: 0.7em;">117,046</td></tr><tr style="background-color: rgb(85, 173, 174); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Bill Pascrell, Jr.</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NJ</td><td style="font-size: 14px; padding: 0.7em;">3409</td><td style="font-size: 14px; padding: 0.7em;">104,473</td></tr><tr style="background-color: rgb(90, 174, 175); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Sheila Jackson Lee</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4818</td><td style="font-size: 14px; padding: 0.7em;">99,142</td></tr><tr style="background-color: rgb(108, 180, 180); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Harley Rouda</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0648</td><td style="font-size: 14px; padding: 0.7em;">79,783</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Alexandria Ocasio-Cortez</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NY</td><td style="font-size: 14px; padding: 0.7em;">3614</td><td style="font-size: 14px; padding: 0.7em;">75,802</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -139,7 +190,8 @@
             geographically small city districts—an indication that they’re
             trying to hang on tight to those districts.
           </p>
-          <p class="table-7"></p>
+          <p><b>Top 5 Franked Mail Spenders</b></p>
+          <p class="table-7"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Ron Wright</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4806</td><td style="font-size: 14px; padding: 0.7em;">268,254</td></tr><tr style="background-color: rgb(95, 176, 177); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Devin Nunes</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0622</td><td style="font-size: 14px; padding: 0.7em;">199,234</td></tr><tr style="background-color: rgb(109, 180, 180); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">John Garamendi</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0603</td><td style="font-size: 14px; padding: 0.7em;">155,702</td></tr><tr style="background-color: rgb(110, 180, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Dan Bishop</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">NC</td><td style="font-size: 14px; padding: 0.7em;">3709</td><td style="font-size: 14px; padding: 0.7em;">153,614</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Alexander Mooney</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">WV</td><td style="font-size: 14px; padding: 0.7em;">5402</td><td style="font-size: 14px; padding: 0.7em;">147,625</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -155,7 +207,8 @@
               >haven’t gotten their receipts in on time for reporting!</a
             >
           </p>
-          <p class="table-8"></p>
+          <p><b>Top 5 Supplies Spenders</b></p>
+          <p class="table-8"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Jenniffer González-Colón</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">PR</td><td style="font-size: 14px; padding: 0.7em;">7298</td><td style="font-size: 14px; padding: 0.7em;">176,190</td></tr><tr style="background-color: rgb(109, 180, 180); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Joe Courtney</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CT</td><td style="font-size: 14px; padding: 0.7em;">0902</td><td style="font-size: 14px; padding: 0.7em;">78,673</td></tr><tr style="background-color: rgb(111, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Greg Stanton</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">AZ</td><td style="font-size: 14px; padding: 0.7em;">0409</td><td style="font-size: 14px; padding: 0.7em;">75,103</td></tr><tr style="background-color: rgb(111, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Diana DeGette</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CO</td><td style="font-size: 14px; padding: 0.7em;">0801</td><td style="font-size: 14px; padding: 0.7em;">73,650</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Scott DesJarlais</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TN</td><td style="font-size: 14px; padding: 0.7em;">4704</td><td style="font-size: 14px; padding: 0.7em;">71,854</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -169,7 +222,8 @@
             that representatives can sometimes go back to their districts to
             hear constituents’ concerns.
           </p>
-          <p class="table-9"></p>
+          <p><b>Top 5 Travel Spenders</b></p>
+          <p class="table-9"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Roger Marshall</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">KS</td><td style="font-size: 14px; padding: 0.7em;">2001</td><td style="font-size: 14px; padding: 0.7em;">133,775</td></tr><tr style="background-color: rgb(89, 174, 175); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Paul A. Gosar</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">AZ</td><td style="font-size: 14px; padding: 0.7em;">0404</td><td style="font-size: 14px; padding: 0.7em;">116,312</td></tr><tr style="background-color: rgb(98, 177, 177); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Roger Williams</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4825</td><td style="font-size: 14px; padding: 0.7em;">105,476</td></tr><tr style="background-color: rgb(102, 178, 179); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Lance Gooden</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4805</td><td style="font-size: 14px; padding: 0.7em;">100,766</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Stacey E. Plaskett</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">VI</td><td style="font-size: 14px; padding: 0.7em;">7898</td><td style="font-size: 14px; padding: 0.7em;">90,065</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -181,7 +235,8 @@
             tends to be done by representatives from smaller districts
             (indicating more populous cities).
           </p>
-          <p class="table-10"></p>
+          <p><b>Top 5 Equipment Spenders</b></p>
+          <p class="table-10"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Jerrold Nadler</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NY</td><td style="font-size: 14px; padding: 0.7em;">3610</td><td style="font-size: 14px; padding: 0.7em;">112,776</td></tr><tr style="background-color: rgb(82, 172, 173); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Michael C. Burgess</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">TX</td><td style="font-size: 14px; padding: 0.7em;">4826</td><td style="font-size: 14px; padding: 0.7em;">101,034</td></tr><tr style="background-color: rgb(101, 178, 178); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">James P. McGovern</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">MA</td><td style="font-size: 14px; padding: 0.7em;">2502</td><td style="font-size: 14px; padding: 0.7em;">76,350</td></tr><tr style="background-color: rgb(105, 179, 179); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Jesús G. "Chuy" García</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">IL</td><td style="font-size: 14px; padding: 0.7em;">1704</td><td style="font-size: 14px; padding: 0.7em;">71,731</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Steven Horsford</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">NV</td><td style="font-size: 14px; padding: 0.7em;">3204</td><td style="font-size: 14px; padding: 0.7em;">62,744</td></tr></tbody></table></p>
         </div>
       </section>
       <section @wheel="$emit('stepcatcher', step)">
@@ -195,7 +250,8 @@
             we <i>do</i> have on this, however, shows that this kind of spending
             has not been done or reported in the Northwest in 2020.
           </p>
-          <p class="table-11"></p>
+          <p><b>Top 5 Transportation of Things Spenders</b></p>
+          <p class="table-11"><table class="table-dist"><thead><tr><th style="font-size: 16px;">Representative</th><th style="font-size: 16px;">Party</th><th style="font-size: 16px;">State</th><th style="font-size: 16px;">Geoid</th><th style="font-size: 16px;">Amount</th></tr></thead><tbody><tr style="background-color: rgb(73, 169, 171); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Ami Bera</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">CA</td><td style="font-size: 14px; padding: 0.7em;">0607</td><td style="font-size: 14px; padding: 0.7em;">2,900</td></tr><tr style="background-color: rgb(109, 180, 180); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Don Bacon</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">NE</td><td style="font-size: 14px; padding: 0.7em;">3102</td><td style="font-size: 14px; padding: 0.7em;">560</td></tr><tr style="background-color: rgb(110, 180, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">James E. Clyburn</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">SC</td><td style="font-size: 14px; padding: 0.7em;">4506</td><td style="font-size: 14px; padding: 0.7em;">464</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">John P. Sarbanes</td><td style="font-size: 14px; padding: 0.7em;">Democrat</td><td style="font-size: 14px; padding: 0.7em;">MD</td><td style="font-size: 14px; padding: 0.7em;">2403</td><td style="font-size: 14px; padding: 0.7em;">350</td></tr><tr style="background-color: rgb(112, 181, 181); color: rgb(238, 238, 238);"><td style="font-size: 14px; padding: 0.7em;">Robert J. Wittman</td><td style="font-size: 14px; padding: 0.7em;">Republican</td><td style="font-size: 14px; padding: 0.7em;">VA</td><td style="font-size: 14px; padding: 0.7em;">5101</td><td style="font-size: 14px; padding: 0.7em;">348</td></tr></tbody></table></p>
         </div>
       </section>
       <section>
@@ -258,15 +314,13 @@
   </div>
 </template>
 <script>
-// import Table from "./Table.vue";
-import * as d3 from "d3";
+// import * as d3 from "d3";
 import "intersection-observer";
 import scrollama from "scrollama";
 const scroller = scrollama();
 
 export default {
   name: "Info",
-  // components: { Table },
   props: ["maindata", "categories", "arrayComputation"],
   emits: ["stepcatcher"],
   data() {
@@ -292,493 +346,9 @@ export default {
           console.log(this.step);
         });
     },
-    classGen: function () {
-      //classes setup
-      const range = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-      range.forEach((d) => this.classes.push(".table-" + d));
-      console.log(this.classes);
-    },
-    stateGen: function () {},
-    allGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(this.localdata);
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-
-      console.log("testing all gen", td);
-      //create table
-      const table = d3
-        .select(this.classes[1])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    pcGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[0])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[2])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    rentGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[1])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[3])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    printGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[2])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[4])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    osGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[3])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[5])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    fmGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[4])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[6])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    spGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[5])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[7])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    travGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[6])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[8])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    equipGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[7])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[9])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
-    tspGen: function () {
-      //setup data
-      const pdata = this.arrayComputation(
-        this.localdata.filter((d) => d.category == this.categories[8])
-      );
-      const format = d3.format(",." + d3.precisionFixed(1) + "f");
-      const td = pdata
-        .sort((a, b) => d3.descending(a.amount, b.amount))
-        .slice(0, 5);
-
-      const colorScale = d3
-        .scaleSequential()
-        .domain(d3.extent(td, (d) => d.amount))
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
-        .range(["#0d9ca2", "#49a9ab", "#70b5b5"].reverse());
-      //create table
-      const table = d3
-        .select(this.classes[10])
-        .append("table")
-        .attr("class", "table-dist");
-      table
-        .append("thead")
-        .append("tr")
-        .selectAll("th")
-        .data(this.columns)
-        .join("th")
-        .text((d) => d)
-        .style("font-size", "16px");
-      let rows = table
-        .append("tbody")
-        .selectAll("tr")
-        .data(td)
-        .join("tr")
-        .style("background-color", (d) => colorScale(d.amount))
-        .style("color", "#eee");
-
-      rows
-        .selectAll("td")
-        .data((d) => Object.values(d))
-        .join("td")
-        .text((d) => (typeof d === "string" ? d : format(d)))
-        .style("font-size", "14px")
-        .style("padding", ".7em");
-    },
   },
   mounted() {
-    Promise.all([
-      d3.csv(
-        "https://raw.githubusercontent.com/jramadani/geo-repspending/master/public/repspending.csv",
-        (d) => ({
-          bioguideid: d.BIOGUIDE_ID,
-          category: d.CATEGORY,
-          amount: +d.AMOUNT,
-          fullname: d.full_name,
-          state: d.state,
-          district: d.district.padStart(2, "0"),
-          party: d.party,
-          geoid: d.geoid.padStart(4, "0"),
-        })
-      ),
-    ]).then(([data]) => {
-      this.localdata = data;
-      this.scroll();
-      this.classGen();
-      this.allGen();
-      this.pcGen();
-      this.rentGen();
-      this.printGen();
-      this.osGen();
-      this.fmGen();
-      this.spGen();
-      this.travGen();
-      this.equipGen();
-      this.tspGen();
-    });
+    this.scroll();
   },
 };
 </script>

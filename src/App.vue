@@ -6,15 +6,17 @@
         Spending</span
       >
       <span class="icons"
-        ><a href=""><img src="../public/notes.svg" /> </a>&nbsp;
-        &nbsp;&nbsp;&nbsp;<a href=""><img src="../public/paper.svg" /></a
+        ><a href="https://github.com/jramadani/geo-repspending"
+          ><img src="../public/notes.svg" /> </a
+        >&nbsp; &nbsp;&nbsp;&nbsp;<a
+          href="https://github.com/jramadani/geo-repspending/public"
+          ><img src="../public/paper.svg" /></a
       ></span>
     </div>
     <div id="page-content">
       <Info
         :categories="categories"
         :maindata="maindata"
-        :spendata="spendata"
         :arrayComputation="arrayComputation"
         @stepcatcher="stepcatch = $event"
       />

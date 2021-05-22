@@ -1,5 +1,6 @@
 <template>
   <div id="map-container"></div>
+  <div class="legendwrapper"><div class="legend"></div></div>
 </template>
 <script>
 import * as d3 from "d3";
@@ -18,6 +19,7 @@ export default {
       legendcol: [],
       dist: null,
       selectedRep: null,
+      selectedCategory: null,
     };
   },
   watch: {
@@ -26,7 +28,6 @@ export default {
       if (val != undefined) {
         this.colorcode = [];
         this.colorcode = this.geoidColor(val);
-        console.log("i'm being watched in maindata", this.colorcode);
       }
     },
     colorcode(val, oldVal) {
@@ -34,6 +35,7 @@ export default {
       if (val.length > 0) {
         this.sourceLayer(val);
         this.mapColorUpdate();
+        this.legend();
       } else {
         this.sourceLayer("rgba(0,0,0,0.1)");
       }
@@ -74,23 +76,16 @@ export default {
       });
 
       this.distmap.on("click", "mainmap", (e) => {
-        console.log("logging the event", e);
         const format = d3.format(",." + d3.precisionFixed(1) + "f");
         this.distmap.getCanvas().style.cursor = "pointer";
         const feature = e.features[0];
         this.dist = feature.properties.GEOID;
         if (this.maindata != undefined && this.maindata.length > 0) {
-          console.log("is maindata ok", this.maindata);
-          console.log(
-            "filtered",
-            this.maindata.filter((d) => d.geoid == this.dist)
-          );
           this.selectedRep = this.maindata.filter((d) => d.geoid == this.dist);
           console.log(this.selectedRep[0]);
           new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML(
-              // brb but we're matching the above filter to the geoid and then adding representative, party, amount spent
               `
         <p><b>Representative:</b> ${this.selectedRep[0].fullname}</p>
         <p><b>Party:</b> ${this.selectedRep[0].party}</p>
@@ -101,7 +96,9 @@ export default {
         } else {
           new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML(`<p>Please wait until a subset of data has loaded in</p>`)
+            .setHTML(
+              `<p>Please continue scrolling down the story to see information about this district!</p>`
+            )
             .addTo(this.distmap);
         }
       });
@@ -109,13 +106,10 @@ export default {
 
     geoidColor: function (datavalue) {
       //GEOID VERSION
-      console.log("geoidcolor debug: ", datavalue);
       this.colorcode = [];
       let color = d3
         .scaleOrdinal()
         .domain([0, d3.max(datavalue, (d) => d.amount)])
-        // .range(["#1b2a36", "#355c6b", "#31a2ab", "#28c5d1", "#fffbe6"]);
-        // .range(["#000027", "#003756", "#00798a", "#28c5d1", "#dbffff"]);
         .range(
           [
             "#0d9ca2",
@@ -133,7 +127,6 @@ export default {
         acc[geo] = color(property.amount);
         return acc;
       }, {});
-      console.log([intersperse].length);
       const ia = Object.entries(intersperse);
       let flattening = ia.flat();
       flattening.unshift("match", ["get", "GEOID"]);
@@ -179,104 +172,121 @@ export default {
         });
       }
     },
+    legendConstruction: function (color, n = 256) {
+      const canv = document.createElement("canvas");
+      canv.width = n;
+      canv.height = 1;
+      const canvas = canv.getContext("2d");
+      for (let i = 0; i < n; ++i) {
+        canvas.fillStyle = color(i / (n - 1));
+        canvas.fillRect(i, 0, 1, 1);
+      }
+      return canv;
+    },
     legend: function () {
       //note to self to wrap this in an if statement
       //the arrays won't be loaded in yet
-
-      //code base from Mike Bostock on Observable
-      function legendConstruction(color, n = 256) {
-        const canv = document.createElement("canvas");
-        canv.width = n;
-        canv.height = 1;
-        const canvas = canv.getContext("2d");
-        for (let i = 0; i < n; ++i) {
-          canvas.fillStyle = color(i / (n - 1));
-          canvas.fillRect(i, 0, 1, 1);
-        }
-        return canv;
+      if (this.maindata == undefined) {
+        this.legendcol = [0, 3000000];
+      } else {
+        this.legendcol = d3
+          .extent(this.maindata, (d) => d.amount)
+          .map((d) => Math.floor(d));
+        console.log("testing if this works??", this.legendcol);
       }
 
-      let legendColor,
-        title,
-        tickSize = 6,
-        width = 320,
-        height = 50 + tickSize,
-        marginTop = 18,
-        marginRight = 0,
-        marginBottom = 16 + tickSize,
-        marginLeft = 0,
-        ticks = width / 64,
-        tickFormat,
-        tickValues;
+      if (this.maindata != undefined && this.maindata.length > 0) {
+        d3.select(".legend svg").remove();
+        //code base from Mike Bostock on Observable
+        let legendColor,
+          title,
+          tickSize = 6,
+          width = 320,
+          height = 50 + tickSize,
+          marginTop = 18,
+          marginRight = 0,
+          marginBottom = 16 + tickSize,
+          marginLeft = 0,
+          ticks = width / 64,
+          tickFormat,
+          tickValues;
 
-      legendColor = d3.scaleSequential(this.legendcol, ["#6ea5c6", "#494197"]);
+        legendColor = d3.scaleSequential(this.legendcol, [
+          "#dae7e5",
+          "#0d9ca2",
+        ]);
 
-      title = "Zip Code Single-Family House Price Index (USD)";
+        title = "Amount Spent by Representative (USD)";
 
-      const legendSvg = d3
-        .selectAll(".legend")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [0, 0, width, height])
-        .style("overflow", "visible")
-        .style("display", "block");
+        const legendSvg = d3
+          .selectAll(".legend")
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height)
+          .attr("viewBox", [0, 0, width, height])
+          .style("overflow", "visible")
+          .style("display", "block");
 
-      let tickAdjust = (g) =>
-        g.selectAll(".tick line").attr("y1", marginTop + marginBottom - height);
-      let x;
-
-      x = Object.assign(
-        legendColor
-          .copy()
-          .interpolator(d3.interpolateRound(marginLeft, width - marginRight)),
-        {
-          range() {
-            return [marginLeft, width - marginRight];
-          },
-        }
-      );
-
-      legendSvg
-        .append("image")
-        .attr("x", marginLeft)
-        .attr("y", marginTop)
-        .attr("width", width - marginLeft - marginRight)
-        .attr("height", height - marginTop - marginBottom)
-        .attr("preserveAspectRatio", "none")
-        .attr(
-          "xlink:href",
-          legendConstruction(legendColor.interpolator()).toDataURL()
-        );
-
-      legendSvg
-        .append("g")
-        .attr("transform", `translate(0,${height - marginBottom})`)
-        .call(
-          d3
-            .axisBottom(x)
-            .ticks(
-              ticks,
-              typeof tickFormat === "string" ? tickFormat : undefined
-            )
-            .tickFormat(
-              typeof tickFormat === "function" ? tickFormat : undefined
-            )
-            .tickSize(tickSize)
-            .tickValues(tickValues)
-        )
-        .call(tickAdjust)
-        .call((g) => g.select(".domain").remove())
-        .call((g) =>
+        let tickAdjust = (g) =>
           g
-            .append("text")
-            .attr("x", marginLeft)
-            .attr("y", marginTop + marginBottom - height - 6)
-            .attr("fill", "currentColor")
-            .attr("text-anchor", "start")
-            .attr("font-weight", "bold")
-            .text(title)
+            .selectAll(".tick line")
+            .attr("y1", marginTop + marginBottom - height);
+        let x;
+
+        x = Object.assign(
+          legendColor
+            .copy()
+            .interpolator(d3.interpolateRound(marginLeft, width - marginRight)),
+          {
+            range() {
+              return [marginLeft, width - marginRight];
+            },
+          }
         );
+
+        legendSvg
+          .append("image")
+          .attr("x", marginLeft)
+          .attr("y", marginTop)
+          .attr("width", width - marginLeft - marginRight)
+          .attr("height", height - marginTop - marginBottom)
+          .attr("preserveAspectRatio", "none")
+          .attr(
+            "xlink:href",
+            this.legendConstruction(legendColor.interpolator()).toDataURL()
+          );
+
+        legendSvg
+          .append("g")
+          .attr("transform", `translate(0,${height - marginBottom})`)
+          .call(
+            d3
+              .axisBottom(x)
+              .ticks(
+                ticks,
+                typeof tickFormat === "string" ? tickFormat : undefined
+              )
+              .tickFormat(
+                typeof tickFormat === "function" ? tickFormat : undefined
+              )
+              .tickSize(tickSize)
+              .tickValues(tickValues)
+          )
+          .call(tickAdjust)
+          .call((g) => g.select(".domain").remove())
+          .call((g) =>
+            g
+              .append("text")
+              .attr("x", marginLeft)
+              .attr("y", marginTop + marginBottom - height - 6)
+              .attr("fill", "currentColor")
+              .attr("text-anchor", "start")
+              .attr("font-weight", "bold")
+              .text(title)
+          );
+      } else {
+        console.log("the data hasn't loaded in yet");
+      }
     },
   },
   mounted() {
@@ -287,4 +297,20 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.legendwrapper {
+  margin-top: 8vh;
+  left: 1;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 2px;
+  z-index: 999999;
+}
+
+.legend {
+  padding: 5px 15px;
+}
+</style>

@@ -11,8 +11,19 @@
       ></span>
     </div>
     <div id="page-content">
-      <Info :spendata="spendata" @stepcatcher="stepcatch = $event" />
-      <USMap :spendata="spendata" :stepcatch="stepcatch" />
+      <Info
+        :categories="categories"
+        :maindata="maindata"
+        :spendata="spendata"
+        :arrayComputation="arrayComputation"
+        @stepcatcher="stepcatch = $event"
+      />
+      <USMap
+        :spendata="spendata"
+        :stepcatch="stepcatch"
+        :categories="categories"
+        :maindata="maindata"
+      />
     </div>
   </div>
 </template>
@@ -32,29 +43,121 @@ export default {
     return {
       spendata: [],
       stepcatch: null,
+      categories: [],
+      maindata: [],
     };
   },
-  methods: {},
+  watch: {
+    stepcatch(val, oldVal) {
+      console.log(`new: ${val}, old: ${oldVal}`);
+      console.log("here is the array with switched case", this.switchCase(val));
+      this.maindata = this.switchCase(val);
+    },
+  },
+  methods: {
+    arrayComputation: function (value) {
+      let localArray = [];
+      d3.rollups(
+        value,
+        (v) => d3.sum(v, (d) => +d.amount),
+        (d) => d.fullname,
+        (d) => d.party,
+        (d) => d.state,
+        (d) => d.geoid
+      )
+        .map((d) => d.flat(6))
+        .forEach((d) =>
+          localArray.push({
+            fullname: d[0],
+            party: d[1],
+            state: d[2],
+            geoid: d[3],
+            amount: d[4],
+          })
+        );
+      console.log(localArray);
+      return localArray;
+    },
+    switchCase: function (step) {
+      switch (step) {
+        case 2:
+          console.log("this is the total spending!");
+          return this.arrayComputation(this.spendata);
+        case 4:
+          console.log("this is the start of the categories");
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[0])
+          );
+        case 5:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[1])
+          );
+        case 6:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[2])
+          );
+        case 7:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[3])
+          );
+        case 8:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[4])
+          );
+        case 9:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[5])
+          );
+        case 10:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[6])
+          );
+        case 11:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[7])
+          );
+        case 12:
+          return this.arrayComputation(
+            this.spendata.filter((d) => d.category == this.categories[8])
+          );
+      }
+    },
+  },
   mounted() {
     Promise.all([
-      d3.csv("repspending.csv", (d) => ({
-        bioguideid: d.BIOGUIDE_ID,
-        category: d.CATEGORY,
-        amount: +d.AMOUNT,
-        fullname: d.full_name,
-        state: d.state,
-        district: d.district.padStart(2, "0"),
-        party: d.party,
-        geoid: d.geoid.padStart(4, "0"),
-      })),
+      d3.csv(
+        "https://raw.githubusercontent.com/jramadani/geo-repspending/master/public/repspending.csv",
+        (d) => ({
+          bioguideid: d.BIOGUIDE_ID,
+          category: d.CATEGORY,
+          amount: +d.AMOUNT,
+          fullname: d.full_name,
+          state: d.state,
+          district: d.district.padStart(2, "0"),
+          party: d.party,
+          geoid: d.geoid.padStart(4, "0"),
+        })
+      ),
     ]).then(([data]) => {
       this.spendata = data;
+      this.categories = d3
+        .rollups(
+          data,
+          (v) => d3.sum(v, (d) => +d.amount),
+          (d) => d.category
+        )
+        .sort((a, b) => d3.descending(a[1], b[1]))
+        .map((d) => d[0]);
       console.log("spending data", this.spendata);
+      console.log("categories: ", this.categories);
     });
   },
-  updated() {
-    console.log("caught:", this.stepcatch);
-  },
+  // updated() {
+  //   console.log("caught:", this.stepcatch);
+  //   // if (this.stepcatch != null || 0) {
+  //   //   console.log("stepcatch debug testing within app", this.stepcatch);
+  //   // }
+  // },
 };
 </script>
 
